@@ -21,8 +21,13 @@
 html,
 body,
 #root {
+    width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+}
+
+html {
+    overflow-y: auto;
 }
 
 body {
@@ -30,9 +35,12 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
+    width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     height: auto;
     background-image: linear-gradient(var(--color-pink), var(--color-pink));
+    overscroll-behavior-x: none;
 }
 
 img,
@@ -43,12 +51,15 @@ video {
 
 #wrapper {
     position: relative;
+    width: 100%;
+    max-width: 100%;
     background-color: transparent;
     background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 76%, transparent 77%, transparent);
     min-height: 100vh;
     height: auto;
     background-size: 80px 80px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
     z-index: 1;
     padding-bottom: 7rem;
 }
@@ -66,6 +77,12 @@ video {
     }
 }
 
+.flag__birthday .flag__left,
+.flag__birthday .flag__right {
+    max-width: min(350px, 46vw);
+    height: auto;
+}
+
 .flag__birthday .flag__left {
     transform: rotate(-10deg) translate(-20px, 30px);
 }
@@ -76,8 +93,10 @@ video {
 
 .content {
     width: 100%;
+    max-width: 100%;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     padding-top: 3rem;
 }
 
@@ -101,37 +120,53 @@ video {
 .left .btn {
     transform: scale(0);
     animation: scaleCricle 2s 16s forwards ease-in-out;
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #btn__letter {
     margin-top: 30px;
     background-color: var(--color-text-pink);
     outline: none;
-    padding: 5px 15px;
+    padding: 10px 18px;
+    min-height: 48px;
+    min-width: 44px;
     border-radius: 50px;
     border: 3px solid var(--color-black);
     font-family: "Sriracha", cursive;
+    font-size: clamp(0.9rem, 3.4vw, 1rem);
     cursor: pointer;
-    z-index: 2;
+    z-index: 6;
     transform: scale(1);
     transition: all .5s ease-in-out;
+    touch-action: manipulation;
 }
 
 .from-ashif {
     margin-top: 30px;
     background-color: var(--color-text-pink);
     outline: none;
-    padding: 5px 15px;
+    padding: 10px 18px;
+    min-height: 48px;
+    min-width: 44px;
     border-radius: 50px;
     border: 3px solid var(--color-black);
     font-family: "Sriracha", cursive;
+    font-size: clamp(0.9rem, 3.4vw, 1rem);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 2;
+    z-index: 6;
     transform: scale(1);
     transition: all .5s ease-in-out;
+    touch-action: manipulation;
 }
 
 #btn__letter:active {
@@ -293,7 +328,7 @@ video {
         transform: translateY(0px);
         opacity: 1;
         visibility: visible;
-        width: 360px;
+        width: min(360px, 88vw);
         height: 0px;
     }
 
@@ -782,14 +817,14 @@ video {
 
 
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 768px) {
 
     .flag__birthday .flag__left {
-        transform: rotate(-10deg) translate(-119px, 3px);
+        transform: rotate(-10deg) translate(-40px, 3px);
     }
 
     .flag__birthday .flag__right {
-        transform: rotate(10deg) translate(-106px, 39px) scaleX(-1);
+        transform: rotate(10deg) translate(40px, 12px) scaleX(-1);
     }
 
     .content {
@@ -809,16 +844,16 @@ video {
         display: flex;
         justify-content: center;
         font-family: "Titan One", sans-serif;
-        font-size: 3rem;
-        letter-spacing: 8px;
+        font-size: clamp(2.1rem, 12vw, 3rem);
+        letter-spacing: 2px;
         flex-direction: column;
         perspective: 1000px;
     }
 
     .cricle {
         position: absolute;
-        top: 10px;
-        right: -54px;
+        top: 8px;
+        right: 4px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -828,8 +863,9 @@ video {
 
     .title .hat {
         position: absolute;
-        right: -98px;
+        right: -8px;
         top: -51px !important;
+        width: min(110px, 28vw);
         transform: rotate(-40deg);
         z-index: -1;
         animation: topHat 4s 7s forwards ease;
@@ -895,8 +931,8 @@ video {
 
     .content .right .image {
         position: relative;
-        width: 200px;
-        height: 200px;
+        width: min(200px, 62vw);
+        height: min(200px, 62vw);
         border-radius: 50%;
         overflow: hidden;
         display: flex;
@@ -918,12 +954,12 @@ video {
     .right .balloon_one {
         position: absolute;
         top: 10px;
-        left: -77px;
+        left: -18px;
         animation: balloon1 2s infinite linear;
     }
 
     .right .balloon_one img {
-        width: 76px !important;
+        width: min(76px, 22vw) !important;
     }
 
     .decorate_flower--one {
@@ -963,7 +999,8 @@ video {
 
     .decorate_star.star5 {
         bottom: 140px;
-        left: 500px;
+        left: auto;
+        right: 18px;
     }
 
     .smiley__icon {
@@ -975,17 +1012,28 @@ video {
     .right .balloon_two {
         position: absolute;
         top: 60px;
-        right: -65px;
+        right: -12px;
     }
 
-    #btn__letter {
-        margin-top: 15px;
-        width: 200px;
+    .left .btn {
+        transform: scale(1);
+        animation: none;
     }
 
+    #btn__letter,
     .from-ashif {
         margin-top: 10px;
-        width: min(200px, 86vw);
+        width: min(280px, 92vw);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .smallLetter {
+        width: min(350px, 94vw);
+        max-width: 100%;
+        z-index: 5;
+        left: 50% !important;
     }
 
     .content .left,
@@ -1010,7 +1058,17 @@ video {
     }
 
     #wrapper {
-        padding-bottom: 8.5rem;
+        padding-bottom: 9.5rem;
+    }
+
+    .music-control {
+        width: 56px;
+        height: 56px;
+    }
+
+    .title .hat img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -1062,6 +1120,8 @@ video {
     z-index: 100000001;
     width: 52px;
     height: 52px;
+    min-width: 48px;
+    min-height: 48px;
     border-radius: 50%;
     border: 3px solid var(--color-black);
     background-color: var(--color-text-pink);
@@ -1073,6 +1133,7 @@ video {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all 0.35s ease;
     touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .music-control:hover {
@@ -1198,9 +1259,11 @@ video {
     }
 }
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 768px) {
     .age__badge {
         font-size: 0.9rem;
+        padding: 6px 16px;
+        min-height: 36px;
     }
 
     .flower-deco {
@@ -1209,6 +1272,7 @@ video {
 
     .flower-decor--home .rose-b,
     .flower-decor--home .tulip-b {
-        display: none;
+        width: 44px !important;
+        opacity: 0.9;
     }
 }

@@ -114,7 +114,7 @@ const LoveLetter = () => {
 
 
     return (
-        <main className='munna bg-[#8b0000] h-screen w-full overflow-hidden'>
+        <main className='munna bg-[#8b0000] min-h-screen w-full overflow-x-hidden overflow-y-auto'>
             <section className="munna cssletter z-10">
                 <div className={`envelope ${openEnvelope ? "active" : ""}`}>
                     <button

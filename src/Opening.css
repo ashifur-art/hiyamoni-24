@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic);
 
 #CakeWrapper {
-    width: 400px;
+    width: min(400px, 100%);
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -545,9 +546,10 @@
 
 
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 768px) {
     #CakeWrapper {
-        width: auto;
+        width: min(100%, 400px);
+        overflow-x: hidden;
     }
 
     .cakeText {
@@ -555,13 +557,16 @@
         top: 65%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: min(92vw, 320px);
+        padding: 0 0.5rem;
     }
 
     /* --- Cake Text Title (Happy 18th Birthday!) --- */
     .cakeText .cakeText-title {
-        font-size: 36px;
+        font-size: clamp(1.5rem, 8vw, 36px);
         color: #8b0000;
-        width: 300px;
+        width: min(300px, 90vw);
+        line-height: 1.2;
     }
 
     .cakeText .cakeText-name {

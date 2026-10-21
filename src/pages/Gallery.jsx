@@ -46,7 +46,15 @@ const Gallery = () => {
                         key={item.id}
                         className={`gallery-card ${active === item.id ? 'is-open' : ''}`}
                         style={{ '--delay': `${0.2 + index * 0.15}s` }}
+                        role="button"
+                        tabIndex={0}
                         onClick={() => setActive(active === item.id ? null : item.id)}
+                        onKeyDown={(event) => {
+                            if (event.key === 'Enter' || event.key === ' ') {
+                                event.preventDefault()
+                                setActive(active === item.id ? null : item.id)
+                            }
+                        }}
                     >
                         <div className="gallery-polaroid">
                             <div className="gallery-photo">

@@ -81,8 +81,9 @@
 /* --- Container and State Classes --- */
 
 .small-rajib-letter {
-    margin: 150px auto;
-    max-width: 350px;
+    margin: 24px auto 0;
+    width: min(350px, 92vw);
+    max-width: 100%;
     height: 375px;
     position: relative;
     overflow: hidden;
@@ -119,6 +120,9 @@
     font-weight: 700;
     padding: 25px;
     opacity: 0;
+    width: 100%;
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    line-height: 1.4;
 }
 
 .small-rajib-paper {
@@ -245,7 +249,9 @@
 
 .small-rajib-envelope {
     width: 94px;
+    min-width: 72px;
     height: 60px;
+    min-height: 48px;
     background: #f36363;
     position: relative;
     margin: auto;
@@ -255,6 +261,7 @@
     transition: box-shadow 0.3s ease;
     transform: translateY(310px);
     animation: Small-wiggle 0.3s 0.2s infinite;
+    touch-action: manipulation;
 }
 
 /* Hover effects */
@@ -383,10 +390,16 @@
 
 .small-rajib-paper-close {
     position: absolute;
-    right: 10px;
-    top: 5px;
-    display: inline-block;
+    right: 6px;
+    top: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
     cursor: pointer;
+    touch-action: manipulation;
+    font-size: 1.25rem;
 }
 
 
@@ -394,7 +407,7 @@
 
 
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 768px) {
     @keyframes upthenscale {
         0% {
             transform: translateY(250px);
@@ -418,23 +431,25 @@
     }
 
     .small-rajib-paper-content {
-        font-size: 14px;
-        width: 290px;
+        font-size: clamp(0.85rem, 3.6vw, 14px);
+        width: 100%;
+        padding: 18px 14px 14px;
     }
 
     .small-rajib-envelope-paper {
-        height: 40px;
+        height: 48px;
+        width: 86px;
     }
 
     .small-rajib-paper {
-        height: 36px;
-        width: 65px;
+        height: 44px;
+        width: 86px;
         transform: translateY(275px);
     }
 
     .small-rajib-envelope {
-        width: 65px;
-        height: 40px;
+        width: 88px;
+        height: 56px;
     }
 
     .small-rajib-envelope-detail::before {
