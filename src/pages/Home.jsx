@@ -106,7 +106,7 @@ const Home = () => {
                         <div className="date__of__birth">
                             <span></span>
                         </div>
-                        <div className="age__badge">Sweet 16</div>
+                        <div className="age__badge">Sweet 17</div>
 
                         <div className="btn flex md:gap-2 md:flex-row flex-col">
                             <button onClick={() => SetActive(!Active)} id="btn__letter">

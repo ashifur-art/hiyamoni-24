@@ -50,7 +50,7 @@ const GiftUnbox = () => {
                             ))}
                         </div>
                         <article className="gift-card">
-                            <h3>Happy Sweet 16, Hiyamoni ✨</h3>
+                            <h3>Happy Sweet 17, Hiyamoni ✨</h3>
                             <p>
                                 Across every late-night text and every long call, this wish still finds you:
                                 may 24th October glow as softly as your smile on my screen.

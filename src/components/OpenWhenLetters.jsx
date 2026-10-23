@@ -8,8 +8,8 @@ const CARDS = [
     },
     {
         id: 'birthday',
-        title: 'Open on your 16th birthday night 🌙',
-        body: `It’s 24th October, and you are sixteen. I cannot hand you a cake in person yet, so I am sending this glow through the phone: Happy Birthday, my Hiyamoni. May this night feel as warm as every long call we’ve ever shared. I love you — Ashif.`,
+        title: 'Open on your 17th birthday night 🌙',
+        body: `It’s 24th October, and you are seventeen. I cannot hand you a cake in person yet, so I am sending this glow through the phone: Happy Birthday, my Hiyamoni. May this night feel as warm as every long call we’ve ever shared. I love you — Ashif.`,
     },
     {
         id: 'low',

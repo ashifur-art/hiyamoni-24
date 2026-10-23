@@ -6,7 +6,7 @@ const LoveLetter = () => {
         {
             id: 1,
             name: "Ashif",
-            msg: "Wish you the happiest 16th birthday, Hiyamoni — 24th October will always bloom for you, even from miles of screen-light away.",
+            msg: "Wish you the happiest 17th birthday, Hiyamoni — 24th October will always bloom for you, even from miles of screen-light away.",
         },
         {
             id: 2,

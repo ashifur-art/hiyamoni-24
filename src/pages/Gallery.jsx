@@ -35,7 +35,7 @@ const Gallery = () => {
             <FlowerDecor variant="gallery" />
 
             <header className="gallery-header">
-                <p className="gallery-kicker">For Hiyamoni · 24th October · Sweet 16</p>
+                <p className="gallery-kicker">For Hiyamoni · 24th October · Sweet 17</p>
                 <h1>Little Praises</h1>
                 <p className="gallery-sub">Three pictures. Three nicknames. Tap a portrait to hold it closer — from Ashif, across the miles.</p>
             </header>

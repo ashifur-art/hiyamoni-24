@@ -70,10 +70,10 @@ const BookCanvas = ({ active, setActive }) => {
 
                         {/* Swapping back to H2 to match the original CSS targeting */}
                         <div className="card2-message-text italic">
-                            <article style={{ marginBottom: '8px' }}>Happy 16th Birthday, Hiyamoni ❤️</article>
+                            <article style={{ marginBottom: '8px' }}>Happy 17th Birthday, Hiyamoni ❤️</article>
                             <article style={{ marginBottom: '10px' }}>From the first late-night text, something in my life shifted—like the universe quietly guiding me toward someone meant for me, even through a glowing screen. Your voice on long calls brought warmth into the parts of me I didn’t even know were cold.</article>
                             <article style={{ marginBottom: '10px' }}>On your birthday, the 24th of October, I just want you to know this: I want you with me in every chapter, every storm, every sunshine, every tomorrow. We have not met in real life yet, but I am already on your side—always. I’ll choose you across every mile until I can finally hold you.</article>
-                            <article style={{ marginBottom: '10px' }}>You’re not just turning 16 today… <br />
+                            <article style={{ marginBottom: '10px' }}>You’re not just turning 17 today… <br />
                                 you’re the reason my nights feel softer, my chats feel brighter, and I keep waiting—happily—for our very first real meeting. Happy Birthday, Hiyamoni.</article>
                         </div>
 
